@@ -1,15 +1,39 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+import localfont from "next/font/local";
+import { ThemeProvider } from "@/components/theme-provider";
+import Wrapper from "@/components/Wrapper";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import CommandBox from "@/components/CommandBox";
+import { Toaster } from "@/components/ui/sonner";
+
+const biotif = localfont({
+  src: [
+    {
+      path: "../public/static/font/Biotif-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/static/font/Biotif-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-biotif",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const neuzeit = localfont({
+  src: [
+    {
+      path: "../public/static/font/NeuzeitGrotesk-bold.woff2",
+      weight: "900",
+      style: "Bold",
+    },
+  ],
+  variable: "--font-neuzeit",
 });
 
 export const metadata: Metadata = {
@@ -23,11 +47,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${biotif.variable} ${neuzeit.variable} font-biotif antialiased`}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="flex flex-col min-h-screen relative">
+            <CommandBox>
+              <Navbar />
+              <Wrapper>{children}</Wrapper>
+              <Footer />
+            </CommandBox>
+          </div>
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );
