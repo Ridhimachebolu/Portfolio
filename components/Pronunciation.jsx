@@ -43,7 +43,7 @@ export default function Pronunciation() {
 
         <audio ref={pronunciationAudio} onEnded={handleAudioEnd}>
           <source
-            src="https://zenorocha.com/static/audio/pronunciation.mp3"
+            src="https://cdn.yellowmessenger.com/q8EBN9EfMA1O1739475823165.mp3"
             type="audio/mpeg"
           />
           Your browser does not support the audio element.

@@ -1,6 +1,5 @@
 import isu from "@/public/images/isu.jpg";
 import yellow from "@/public/images/yellow.jpeg";
-import terralogic from "@/public/images/terralogic.jpeg";
 import infosys from "@/public/images/infosys.png";
 
 export const about = {
@@ -15,26 +14,18 @@ export const about = {
         url: "https://www.infosys.com/",
       },
       {
-        role: "Technology Analyst",
-        company: "Terralogic",
-        startDate: "Mar 2022",
-        endDate: "Oct 2024",
-        logo: terralogic,
-        url: "https://terralogic.com/",
-      },
-      {
-        role: "Software Engineer",
+        role: "Web Developer",
         company: "Indiana State University",
-        startDate: "Jan 2020",
-        endDate: "Dec 2021",
+        startDate: "Aug 2022",
+        endDate: "May 2024",
         logo: isu,
         url: "https://indianastate.edu/",
       },
       {
-        role: "Intern",
+        role: "Software Engineer",
         company: "Yellow.ai",
-        startDate: "Jul 2018",
-        endDate: "Dec 2019",
+        startDate: "Dec 2019",
+        endDate: "July 2022",
         logo: yellow,
         url: "https://yellow.ai/",
       },
@@ -52,11 +43,11 @@ export const about = {
       },
       {
         degree: "Bachelor's in Computer Science",
-        institution: "Yellow University",
+        institution: "JNTUA College of Engineering",
         startDate: "Aug 2016",
         endDate: "May 2020",
-        logo: yellow,
-        url: "https://indianastate.edu/",
+        logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWWAnUmdjBIuM7pshy50DDlfAfWTeXgQAoGw&s",
+        url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWWAnUmdjBIuM7pshy50DDlfAfWTeXgQAoGw&s",
       },
     ],
   },

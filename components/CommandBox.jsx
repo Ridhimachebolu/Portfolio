@@ -37,7 +37,7 @@ export default function CommandBox({ children }) {
   const navigationMap = {
     a: "/about",
     h: "/",
-    p: "/projects",
+    // p: "/projects",
     u: "/uses",
   };
 
@@ -56,20 +56,30 @@ export default function CommandBox({ children }) {
   // Function to handle single key actions
   const handleSingleKeyAction = React.useCallback(
     (key) => {
-      switch (key) {
+      switch (key.toLowerCase()) {
         case "l":
-          toast("Portfolio Link Copied Successfully!", {
-            description: "You can now share it.",
-            type: "success",
-            // action: {
-            //   label: "Undo",
-            //   onClick: () => console.log("Undo"),
-            // },
-          });
+          const linkToCopy = "https://www.linkedin.com/in/dheerajnaguru/"; // Replace with your actual link
+          navigator.clipboard
+            .writeText(linkToCopy)
+            .then(() => {
+              toast("Portfolio Link Copied Successfully!", {
+                description: "You can now share it.",
+                type: "success",
+              });
+            })
+            .catch((err) => {
+              toast("Failed to copy link", {
+                description: "Please try again.",
+                type: "error",
+              });
+              console.error("Error copying to clipboard: ", err);
+            });
           setOpen(false);
           break;
         case "e":
-          setOpen((prev) => !prev);
+          if (typeof window !== "undefined") {
+            window.location.href = "mailto:dheerajnaguru@gmail.com"; // Replace with your email
+          }
           break;
         default:
           break;
@@ -128,18 +138,14 @@ export default function CommandBox({ children }) {
               <LinkIcon />
               <span>Copy Link</span>
               <CommandShortcut>
-                <span className="bg-[#121212] p-2 rounded">
-                  L
-                </span>
+                <span className="bg-[#121212] p-2 rounded">L</span>
               </CommandShortcut>
             </CommandItem>
             <CommandItem onSelect={() => handleSingleKeyAction("e")}>
               <MailPlus />
               <span>Send Email</span>
               <CommandShortcut>
-                <span className="bg-[#121212] p-2 rounded">
-                  E
-                </span>
+                <span className="bg-[#121212] p-2 rounded">E</span>
               </CommandShortcut>
             </CommandItem>
           </CommandGroup>
@@ -149,7 +155,7 @@ export default function CommandBox({ children }) {
               <CommandItem key={key} onSelect={() => handleNavigation(key)}>
                 {key === "h" && <House />}
                 {key === "a" && <CircleUser />}
-                {key === "p" && <Lightbulb />}
+                {/* {key === "p" && <Lightbulb />} */}
                 {key === "u" && <Laptop />}
                 <span>
                   {path === "/"
@@ -159,9 +165,7 @@ export default function CommandBox({ children }) {
                 </span>
 
                 <CommandShortcut>
-                  <span className="bg-[#121212] p-2 rounded mr-2">
-                    G
-                  </span>
+                  <span className="bg-[#121212] p-2 rounded mr-2">G</span>
                   <span className="bg-[#121212] p-2 rounded">
                     {key.toUpperCase()}
                   </span>

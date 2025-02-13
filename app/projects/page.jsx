@@ -12,9 +12,9 @@ const data = {
       year: 2024,
       projects: [
         {
-          name: "Project 1 Project 1 Project 1",
-          description: "Brief description of Project 1.",
-          url: "",
+          name: "Studlx",
+          description: "Platform for learning resources.",
+          url: "https://studlx.netlify.app/",
         },
         {
           name: "Project 2",
@@ -92,12 +92,12 @@ const page = () => {
                 <li className=" cursor-pointer hover:text-white" key={index}>
                   <div className="text-neutral-500 dark:text-neutral-400">
                     <LinkPreview
-                      url="https://tailwindcss.com"
+                      url={project?.url}
                       className="font-bold border-b border-gray-400 pb-0.5"
                     >
-                      Project Name
+                      {project?.name}
                     </LinkPreview>{" "}
-                    - and are a great way to build modern websites.
+                    - {project.description}
                   </div>
                 </li>
               ))}

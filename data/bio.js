@@ -1,7 +1,7 @@
 export const bio = {
   firstName: "Dheeraj",
   fullName: "Dheeraj Naguru",
-  pronunciation: "https://zenorocha.com/static/audio/pronunciation.mp3",
+  pronunciation: "https://cdn.yellowmessenger.com/q8EBN9EfMA1O1739475823165.mp3",
   currentPosition: "Software Development Engineer",
   currentCompany: "Infosys Limited",
   currentCompanyImage:
@@ -11,7 +11,7 @@ export const bio = {
 };
 
 export const links = [
-  { title: "Github", url: "https://github.com/joseph-k-joseph" },
-  { title: "Email", url: "https://twitter.com/joseph_k_joseph" },
-  { title: "Linkedin", url: "https://www.linkedin.com/in/joseph-k-joseph/" },
+  { title: "Github", url: "https://github.com/nagurudheeraj" },
+  { title: "Email", url: "mailto:dheerajnaguru@gmail.com" },
+  { title: "Linkedin", url: "https://www.linkedin.com/in/dheerajnaguru/" },
 ];

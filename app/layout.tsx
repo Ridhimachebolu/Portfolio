@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import localfont from "next/font/local";
+import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import Wrapper from "@/components/Wrapper";
 import Navbar from "@/components/Navbar";
@@ -9,32 +9,34 @@ import Footer from "@/components/Footer";
 import CommandBox from "@/components/CommandBox";
 import { Toaster } from "@/components/ui/sonner";
 
-const biotif = localfont({
-  src: [
-    {
-      path: "static/font/Biotif-Regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../public/static/font/Biotif-Bold.woff2",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  variable: "--font-biotif",
-});
+const inter = Inter({ subsets: ["latin"] });
 
-const neuzeit = localfont({
-  src: [
-    {
-      path: "static/font/NeuzeitGrotesk-bold.woff2",
-      weight: "900",
-      style: "Bold",
-    },
-  ],
-  variable: "--font-neuzeit",
-});
+// const biotif = localfont({
+//   src: [
+//     {
+//       path: "public/static/font/Biotif-Regular.woff2",
+//       weight: "400",
+//       style: "normal",
+//     },
+//     {
+//       path: "@/static/font/Biotif-Bold.woff2",
+//       weight: "700",
+//       style: "normal",
+//     },
+//   ],
+//   variable: "--font-biotif",
+// });
+
+// const neuzeit = localfont({
+//   src: [
+//     {
+//       path: "@/static/font/NeuzeitGrotesk-bold.woff2",
+//       weight: "900",
+//       style: "Bold",
+//     },
+//   ],
+//   variable: "--font-neuzeit",
+// });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -48,21 +50,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${biotif.variable} ${neuzeit.variable} font-biotif antialiased`}
-      >
+      <body className={inter.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex flex-col min-h-screen relative">
-            <CommandBox>
-              <Navbar />
-              <Wrapper>{children}</Wrapper>
-              <Footer />
-            </CommandBox>
+          <div className="lg:hidden fixed inset-0 flex text-center justify-center bg-gray-800 text-white bg-black">
+            <p className="text-sm font-sans m-10">
+              Mobile view is under construction. For the best experience, please
+              use a laptop.
+            </p>
+          </div>
+
+          <div className="lg:block hidden">
+            <div className="flex flex-col min-h-screen relative">
+              <CommandBox>
+                <Navbar />
+                <Wrapper>{children}</Wrapper>
+                <Footer />
+              </CommandBox>
+            </div>
           </div>
           <Toaster />
         </ThemeProvider>

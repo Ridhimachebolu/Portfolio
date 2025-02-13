@@ -18,6 +18,17 @@ const Navbar = () => {
   // // Don't render anything until after the component has mounted
   // if (!isMounted) return null;
 
+  const simulateKeyboardShortcut = () => {
+    const event = new KeyboardEvent("keydown", {
+      key: "k",
+      code: "KeyK",
+      keyCode: 75,
+      ctrlKey: true, // Simulates Ctrl + K (set to true for Command + K on Mac)
+      metaKey: navigator.platform.indexOf("Mac") > -1, // Detects if on a Mac and uses Cmd + K
+    });
+    document.dispatchEvent(event); // Dispatch the event to the document
+  };
+
   return (
     <div className="m-5 flex gap-10 justify-between items-center font-sans">
       <Link href="/">
@@ -41,7 +52,7 @@ const Navbar = () => {
             <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-5 h-[1px] bg-slate-300" />
           )}
         </Link>
-        <Link
+        {/* <Link
           href="/projects"
           className={`relative pb-1 text-sm ${
             pathname === "/projects"
@@ -53,7 +64,7 @@ const Navbar = () => {
           {pathname === "/projects" && (
             <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-5 h-[1px] bg-slate-300" />
           )}
-        </Link>
+        </Link> */}
         <Link
           href="/gear"
           className={`relative pb-1 text-sm ${
@@ -77,7 +88,7 @@ const Navbar = () => {
           )}
         </Link>
       </div>
-      <Button variant="ghost" className="rounded w-10 h-10">
+      <Button variant="ghost" className="rounded w-10 h-10" onClick={simulateKeyboardShortcut}>
         <Command />
       </Button>
     </div>
