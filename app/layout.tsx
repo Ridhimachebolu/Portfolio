@@ -12,7 +12,7 @@ import { Toaster } from "@/components/ui/sonner";
 const biotif = localfont({
   src: [
     {
-      path: "../public/static/font/Biotif-Regular.woff2",
+      path: "static/font/Biotif-Regular.woff2",
       weight: "400",
       style: "normal",
     },
@@ -28,7 +28,7 @@ const biotif = localfont({
 const neuzeit = localfont({
   src: [
     {
-      path: "../public/static/font/NeuzeitGrotesk-bold.woff2",
+      path: "static/font/NeuzeitGrotesk-bold.woff2",
       weight: "900",
       style: "Bold",
     },
