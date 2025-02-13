@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils"
 import { Dialog, DialogContent } from "@/components/ui/dialog"
 
 const Command = React.forwardRef<
-  React.ElementRef<typeof CommandPrimitive>,
+  HTMLDivElement,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive>
 >(({ className, ...props }, ref) => (
   <CommandPrimitive
@@ -21,9 +21,10 @@ const Command = React.forwardRef<
     {...props}
   />
 ))
+
 Command.displayName = CommandPrimitive.displayName
 
-const CommandDialog = ({ children, ...props }: DialogProps) => {
+const CommandDialog: React.FC<DialogProps & { children: React.ReactNode }> = ({ children, ...props }) => {
   return (
     <Dialog {...props}>
       <DialogContent className="overflow-hidden p-0">
@@ -34,6 +35,7 @@ const CommandDialog = ({ children, ...props }: DialogProps) => {
     </Dialog>
   )
 }
+
 
 const CommandInput = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Input>,

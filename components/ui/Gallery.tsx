@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import clsx from "clsx";
 
 import goa from "@/public/images/goa.jpg";
-import Nellore2 from "@/public/images/Nellore2.jpg";
 import Chicago from "@/public/images/Chicago.jpg";
 import Nellore from "@/public/images/Nellore.jpg";
 
