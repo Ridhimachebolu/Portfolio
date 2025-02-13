@@ -5,7 +5,7 @@ import Link from "next/link";
 import { LinkPreview } from "@/components/ui/link-preview";
 
 import { bio } from "@/data/bio";
-import { Button } from "./ui/button";
+// import { Button } from "./ui/button";
 
 const Home = () => {
   const simulateKeyboardShortcut = () => {
