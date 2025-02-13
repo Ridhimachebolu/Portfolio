@@ -38,7 +38,7 @@ export default function CommandBox({ children }) {
     a: "/about",
     h: "/",
     // p: "/projects",
-    u: "/uses",
+    u: "/gear",
   };
 
   // Function to handle navigation
