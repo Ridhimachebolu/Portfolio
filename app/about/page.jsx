@@ -125,8 +125,8 @@ const page = () => {
                   <span className="font-bold text-white">
                     frontend and backend web development
                   </span>{" "}
-                  using JavaScript, TypeScript, C++, Python, Java and Go, with
-                  expertise in frameworks and libraries like React.js, Node.js, Spring boot,
+                  using Java, JavaScript, TypeScript, C++, Python and Go, with
+                  expertise in frameworks and libraries like React.js, Node.js, Spring, Spring Boot,
                   Next.js, Express.js and Vue.js
                 </p>
                 <p>
