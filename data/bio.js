@@ -11,7 +11,7 @@ export const bio = {
 };
 
 export const links = [
-  { title: "Github", url: "https://github.com/Ridhimachebolu" },
+  { title: "Github", url: "https://github.com/ridhimachebolu" },
   { title: "Email", url: "mailto:ridhimachebol@gmail.com" },
   { title: "Linkedin", url: "https://www.linkedin.com/in/ridhima-ch/" },
 ];
