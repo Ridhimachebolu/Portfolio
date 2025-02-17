@@ -88,21 +88,23 @@ const page = () => {
           <div className="flex-1 space-y-4 grid-cols-2">
             <p>
               <span className="font-bold text-white">
-                Hey, I'm Dheeraj Naguru
+                Hey, I'm Ridhima Chebolu
               </span>{" "}
               {bio?.pronunciation && <Pronunciation url={bio?.pronunciation} />}{" "}
-              I started my career in December 2019 as a software engineer at
-              Yellow.ai, diving into the world of full-stack web development.
+              I started my career in Dec 2019 as a software engineer at
+              Nextgen Information Services, diving into the world of full-stack web development.
             </p>
-            <p>
+            {/* <p>
               Currently, I work as a{" "}
+              Currently, I am looking for Full-Time opportunities
+
               <span className="font-bold text-white">
                 Technology Analyst at Infosys
               </span>
               , based in{" "}
               <span className="font-bold text-white">Richardson, Texas</span>.
               where I lead frontend and backend development projects.
-            </p>
+            </p> */}
             <p>
               I'm passionate about crafting seamless web experiences and
               tackling complex technical challenges. When I'm not coding, I
@@ -123,8 +125,8 @@ const page = () => {
                   <span className="font-bold text-white">
                     frontend and backend web development
                   </span>{" "}
-                  using JavaScript, TypeScript, C++, Python, and Go, with
-                  expertise in frameworks and libraries like React.js, Node.js,
+                  using JavaScript, TypeScript, C++, Python, Java and Go, with
+                  expertise in frameworks and libraries like React.js, Node.js, Spring boot,
                   Next.js, Express.js and Vue.js
                 </p>
                 <p>

@@ -10,7 +10,7 @@ const page = () => {
   const buttonTitles = [
     {
       title: "Mail",
-      link: "mailto:dheerajnaguru@gmail.com",
+      link: "mailto:ridhimachebol@gmail.com",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +24,7 @@ const page = () => {
     },
     {
       title: "Linked In",
-      link: "https://www.linkedin.com/in/dheerajnaguru/",
+      link: "https://www.linkedin.com/in/ridhima-ch/",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +38,7 @@ const page = () => {
     },
     {
       title: "Github",
-      link: "https://github.com/nagurudheeraj",
+      link: "https://github.com/Ridhimachebolu",
 
       icon: (
         <svg
@@ -53,7 +53,7 @@ const page = () => {
     },
     {
       title: "Instagram",
-      link: "https://www.instagram.com/dheeraj_redde/",
+      link: "https://www.instagram.com/ridhima_chebolu/",
 
       icon: (
         <svg

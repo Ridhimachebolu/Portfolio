@@ -1,53 +1,52 @@
 import isu from "@/public/images/isu.jpg";
-import yellow from "@/public/images/yellow.jpeg";
-import infosys from "@/public/images/infosys.png";
+import  Nextgen from "@/public/images/Nextgen.jpeg";
 
 export const about = {
   experience: {
     jobs: [
       {
-        role: "Technology Analyst",
-        company: "Infosys",
-        startDate: "Oct 2024",
-        endDate: "Current",
-        logo: infosys,
-        url: "https://www.infosys.com/",
-      },
-      {
-        role: "Web Developer",
+        role: "Graduate Assistant",
         company: "Indiana State University",
-        startDate: "Aug 2022",
+        startDate: "Jan 2023",
         endDate: "May 2024",
         logo: isu,
         url: "https://indianastate.edu/",
       },
       {
         role: "Software Engineer",
-        company: "Yellow.ai",
+        company: "Nextgen Information Services",
+        startDate: "June 2020",
+        endDate: "Dec 2022",
+        logo: Nextgen,
+        url: "https://nextgen-is.com",
+      },
+      {
+        role: "Software Engineer Intern",
+        company: "Nextgen Information Services",
         startDate: "Dec 2019",
-        endDate: "July 2022",
-        logo: yellow,
-        url: "https://yellow.ai/",
+        endDate: "May 2020",
+        logo: Nextgen,
+        url: "https://nextgen-is.com",
       },
     ],
   },
   education: {
     schools: [
       {
-        degree: "Master's in Computer Science",
+        degree: "Master of Science in Computer Science",
         institution: "Indiana State University",
-        startDate: "Jan 2020",
-        endDate: "Dec 2021",
+        startDate: "Jan 2023",
+        endDate: "May 2024",
         logo: isu,
-        url: "https://jntuacep.ac.in/",
+        url: "https://indianastate.edu/",
       },
       {
-        degree: "Bachelor's in Computer Science",
+        degree: "Bachelor's in Electronics and Communication Engineering",
         institution: "JNTUA College of Engineering",
-        startDate: "Aug 2016",
+        startDate: "June 2016",
         endDate: "May 2020",
         logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWWAnUmdjBIuM7pshy50DDlfAfWTeXgQAoGw&s",
-        url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWWAnUmdjBIuM7pshy50DDlfAfWTeXgQAoGw&s",
+        url: "https://www.jntua.ac.in/",
       },
     ],
   },

@@ -58,7 +58,7 @@ export default function CommandBox({ children }) {
     (key) => {
       switch (key.toLowerCase()) {
         case "l":
-          const linkToCopy = "https://www.linkedin.com/in/dheerajnaguru/"; // Replace with your actual link
+          const linkToCopy = "https://www.linkedin.com/in/ridhima-ch/"; // Replace with your actual link
           navigator.clipboard
             .writeText(linkToCopy)
             .then(() => {
@@ -78,7 +78,7 @@ export default function CommandBox({ children }) {
           break;
         case "e":
           if (typeof window !== "undefined") {
-            window.location.href = "mailto:dheerajnaguru@gmail.com"; // Replace with your email
+            window.location.href = "mailto:ridhimachebol@gmail.com"; // Replace with your email
           }
           break;
         default:

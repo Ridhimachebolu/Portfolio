@@ -23,10 +23,10 @@ const Home = () => {
   return (
     <div className="flex flex-col justify-center items-start flex-grow h-full -mt-20">
       <h1 className="text-6xl font-extrabold tracking-wide font-neuzeit bg-gradient-to-r from-purple-400 to-purple-600 text-transparent bg-clip-text">
-        {"DHEERAJ NAGURU"}
+        {"RIDHIMA CHEBOLU"}
       </h1>
       <div className="mt-5 text-white">
-        {bio?.currentPosition} at{" "}
+        {bio?.currentPosition} 
         <LinkPreview
           href={bio?.currentCompany || ""}
           url={bio?.currentCompanyImage || ""}

@@ -36,7 +36,7 @@ const Navbar = () => {
           variant="ghost"
           className="rounded w-10 h-10 text-base font-semibold pt-2"
         >
-          D
+          R
         </Button>
       </Link>
       {/* </Link> */}

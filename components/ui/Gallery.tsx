@@ -5,9 +5,9 @@ import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
 import clsx from "clsx";
 
-import goa from "@/public/images/goa.jpg";
+import Singapore from "@/public/images/Singapore.jpg";
 import Chicago from "@/public/images/Chicago.jpg";
-import Nellore from "@/public/images/Nellore.jpg";
+import Indiana from "@/public/images/Indiana.jpg";
 
 import Halo from "@/components/ui/Halo";
 
@@ -139,7 +139,7 @@ export default function Gallery() {
           index={2}
         />
         <Photo
-          src={Nellore}
+          src={Singapore}
           meta="27-May-2023"
           alt={"Snowboarding in Colorado"}
           width={220}
@@ -150,7 +150,7 @@ export default function Gallery() {
           flipDirection="left"
         />
         <Photo
-          src={goa}
+          src={Indiana}
           meta="15-Nov-2020"
           alt="World Trade Center"
           width={230}
